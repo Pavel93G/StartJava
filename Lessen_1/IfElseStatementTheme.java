@@ -1,13 +1,12 @@
 public class IfElseStatementTheme {
     public static void main(String[]args) {
-        System.out.println("Задача №1: Перевод псевдокода на язык Java: ");
+        System.out.println("\nЗадача №1: Перевод псевдокода на язык Java. ");
         int age = 28;
 
         if (age > 20) {
             System.out.println("Человек старше 20 лет.");
         } else { System.out.println("Человек младше 20 лет.");
         }
-        System.out.print("\n");
 
         boolean maleGender = true;
 
@@ -16,15 +15,13 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Пол мужской.");
         }
-          System.out.print("\n");
 
         double yourHeight = 1.76;
         if (yourHeight < 1.80) {
             System.out.println("Твой рост меньше 1 м 80 см.");
         } else {
-            System.out.println("Твой рост больше 1 м 80 см.");
+            System.out.println("\nТвой рост больше 1 м 80 см.");
         }
-        System.out.print("\n");
 
         String name = "Igor";
         char firstLetterOfTheName = name.charAt(0);
@@ -35,26 +32,24 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Не угадал какая первая буква в имени.");
         }
-        System.out.print("\n");
 
-        System.out.println("Задача №2: Поиск максимального и минимального числа. ");
+        System.out.println("\nЗадача №2: Поиск максимального и минимального числа. ");
         System.out.println("Даны два числа: ");
-        int number1 = 324;
-        int number2 = 354;
+        int srcNum = 324;
+        int srcNum2 = 354;
 
         System.out.println("Первое число: 324 ");
         System.out.println("Втрое числа: 354");
 
-        if (number1 > number2) {
+        if (srcNum > srcNum2) {
             System.out.println("Число 1 больше числа 2.");
-        } else if (number1 < number2) {
+        } else if (srcNum < srcNum2) {
             System.out.println("Число 2 больше числа 1");
         } else {
             System.out.println("Они равны.");
         }
-        System.out.print("\n");
 
-        System.out.println("Задача № 3: Работа с числом. ");
+        System.out.println("\nЗадача № 3: Работа с числом. ");
         int number = -80264;
         if ((number % 2) == 0) {
             System.out.println("Данное число чётное.");
@@ -69,15 +64,14 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Число является нулевым.");
         }
-        System.out.print("\n");
 
-        System.out.println("Задача № 4: Поиск одинаковых цифр в числах. ");
-        System.out.println("/n");
-        int numN = 256;
-        int numM = 258;
+        System.out.println("\nЗадача № 4: Поиск одинаковых цифр в числах. ");
 
-        String str1 = Integer.toString(numN);
-        String str2 = Integer.toString(numM);
+        int numberN = 256;
+        int numberM = 258;
+
+        String str1 = Integer.toString(numberN);
+        String str2 = Integer.toString(numberM);
 
         char digitA1 = str1.charAt(0);
         char digitA2 = str2.charAt(0);
@@ -87,21 +81,20 @@ public class IfElseStatementTheme {
         char digitC2 = str2.charAt(2);
 
         if (digitA1 == digitA2) {
-            System.out.println("В числах numN и numM одинаковые цифры A состоят в разряде сотни.");
+            System.out.println("В числах N и M одинаковые цифры A состоят в разряде сотни.");
         }else {
             System.out.println("В данных числах нет одинаковых цифр.");
         }
         if (digitB1 == digitB2) {
-            System.out.println("В числах numN и numM одинаковые цифры B состоят в разряде десятки.");
+            System.out.println("В числах N и M одинаковые цифры B состоят в разряде десятки.");
         }else {
             System.out.println("В данных числах нет одинаковых цифр.");
         }
         if (digitC1 == digitC2) {
-            System.out.println("В числах numN и numM одинаковые цифры C состоят в разряде единицы.");
+            System.out.println("В числах N и M одинаковые цифры C состоят в разряде единицы.");
         }
-        System.out.print("\n");
 
-        System.out.println("Задача № 5: Определение буквы, числа или символа по их коду. ");
+        System.out.println("\nЗадача № 5: Определение буквы, числа или символа по их коду. ");
         char symbol = 0057;
 
         if (symbol >= 'a' && symbol <= 'z') {
@@ -117,9 +110,8 @@ public class IfElseStatementTheme {
         } else {
             System.out.println(symbol + " Это не буква и не число.");
         }
-        System.out.print("\n");
 
-        System.out.println("Задача № 6: Определение суммы вклада и начисленных банком %.");
+        System.out.println("\nЗадача № 6: Определение суммы вклада и начисленных банком %.");
 
         int  sumDepozit = 300000;
 
@@ -142,9 +134,8 @@ public class IfElseStatementTheme {
             System.out.println("Сумма начисляемая банком за год, (10% от суммы депозита) : " + amountWithInterest);
             System.out.println(" Итоговая сумма с начисленными % : " + totalAmountDepozit);
         }
-        System.out.print("\n");
 
-        System.out.println("Задача № 7: Определение оценки по предметам.");
+        System.out.println("\nЗадача № 7: Определение оценки по предметам.");
         int history = 59;
         int programming =  91; 
         int historyAssessment = 0;
@@ -162,8 +153,6 @@ public class IfElseStatementTheme {
         } else if (history > 91) {
             historyAssessment = 5;
             System.out.println("История: " + historyAssessment);
-        System.out.print("\n");
-
         }
 
          if (programming <= 60) {
@@ -179,22 +168,19 @@ public class IfElseStatementTheme {
             programmingAssessment = 5;
             System.out.println("Программированию: " + programmingAssessment);
         } 
-        System.out.print("\n");
         int averageScore = historyAssessment + programmingAssessment / 2;
-        System.out.println("Средний балл по предметам: " + averageScore);
+        System.out.println("\nСредний балл по предметам: " + averageScore);
         int gradeAverage = (history + programming) / 2;
         System.out.println("Средний процент по предметам: " + gradeAverage + " %");
-        System.out.print("\n");
 
-        System.out.println("Задача№ 8: Расчет прибыли. ");
+        System.out.println("\nЗадача№ 8: Расчет прибыли. ");
         int rentPremises = 5000;
         int averageMonthlyProfit = 13000;
         int costOfGoods = 9000;
         int netProfit = averageMonthlyProfit - rentPremises - costOfGoods;
         System.out.println("Прибыль за год: " + netProfit);
-        System.out.println("\n");
 
-        System.out.println("Задача№ 9: Определение существования треугольника.");
+        System.out.println("\nЗадача№ 9: Определение существования треугольника.");
         int a = 3;
         int b = 4;
         int c = 5;
@@ -217,9 +203,8 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Треугольник не может существовать.");
         }
-        System.out.println("\n");
 
-        System.out.println("Задача № 10: Подсчет количества банкнот.");
+        System.out.println("\nЗадача № 10: Подсчет количества банкнот.");
         int usd = 567;
 
         int oneDollar = 1;
@@ -233,7 +218,7 @@ public class IfElseStatementTheme {
         int reverseCalculation = (dollarBill50 * fiftyDollars - 50) + (tenDollars * dollarBill10) + dollarBill;
 
         System.out.println("Номиналы банкнот: " + oneDollar + " $, " + tenDollars + " $, " + fiftyDollars + " $, ");
-        System.out.println("567 usd это: " + dollarBill + " однодолларовых банкнот, " + (dollarBill10 - 5) + " купюр по 10 долоров, и " + dollarBill50 + " банкнот по 50 долларовых.");
+        System.out.println("567 usd это: " + dollarBill + " однодолларовых банкнот, " + (dollarBill10 - 5) + " купюра 10 долоров, и " + dollarBill50 + " банкнот по 50 долларовых.");
         System.out.println("Обратный расчет: " + reverseCalculation);
     }
 }
