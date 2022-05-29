@@ -50,18 +50,22 @@ public class IfElseStatementTheme {
 
         System.out.println("\nЗадача № 3: Работа с числом. ");
         srcNum = -80264;
-        if ((srcNum % 2) == 0 && srcNum != 0) {
+        if (srcNum != 0) {
+            if ((srcNum % 2) == 0) {
             System.out.println("Данное число чётное.");
-        } else if ((srcNum % 2) != 0 && srcNum != 0) {
+            } else if ((srcNum % 2) != 0) {
             System.out.println("Даное число нечётное.");
-        }
-        if (srcNum > 0 && srcNum != 0) {
+            }
+            if (srcNum > 0) {
             System.out.println("Данное число является положительным.");
-        } else if (srcNum < 0 && srcNum != 0) {
+            } else if (srcNum < 0) {
             System.out.println("Данное число является отрицательным.");
-        } else {
+            } else {
             System.out.println("Число является нулём.");
+            }
         }
+
+
 
         System.out.println("\nЗадача № 4: Поиск одинаковых цифр в числах. ");
 
@@ -75,7 +79,6 @@ public class IfElseStatementTheme {
         int unitsM = numberM % 10;
         int tensM = numberM / 10 % 10;
         int hundredsM = numberM / 100; 
-
 
         if (hundredsN == hundredsM) {
             System.out.println("В числах: " + numberN + ", " + numberM + " одинаковая цифры: " + 
@@ -112,24 +115,23 @@ public class IfElseStatementTheme {
 
         System.out.println("\nЗадача № 6: Определение суммы вклада и начисленных банком %.");
 
-        int  sumDeposit = 300000;
-        int fivePercent = sumDeposit / 100 * 5; 
-        int sevenPercent = sumDeposit / 100 * 7;
-        int tenPercent = sumDeposit / 100 * 10; 
-
-        if(sumDeposit < 100000){
-            System.out.println("Сумма вклада: " + sumDeposit + 
-                ". Сумма начисляемая банком за год, (5% от суммы депозита) : " + fivePercent + 
-                "\n Итоговая сумма с начисленными % : " + (sumDeposit + fivePercent));
-        } else if (sumDeposit > 100000 && sumDeposit <= 300000) {
-            System.out.println("Сумма вклада: " + sumDeposit + 
-                ". Сумма начисляемая банком за год, (7% от суммы депозита) : " + sevenPercent + 
-                "\n Итоговая сумма с начисленными % : " + (sumDeposit + sevenPercent));
-        } else if (sumDeposit < 300000) {
-            System.out.println("Сумма вклада: " + sumDeposit + 
-                ". Сумма начисляемая банком за год, (10% от суммы депозита) : " + tenPercent + 
-                "\n Итоговая сумма с начисленными % : " + (sumDeposit + tenPercent));
+        int deposit = 300_000;
+        int bankPercent = 0;
+        if(deposit < 100_000) {
+            bankPercent = 5;
+        } else if (deposit >= 100_000 && deposit <= 300_000) {
+            bankPercent = 7;
+        } else if (deposit >= 300_000) {
+            bankPercent = 10;
         }
+
+        int sumPercent = deposit / 100 * bankPercent; 
+
+        System.out.println("Сумма вклада: " + deposit + 
+                "\nСумма начисляемая банком за год : " + sumPercent + 
+                "\nИтоговая сумма с начисленными % : " + (deposit + sumPercent));  
+
+
 
         System.out.println("\nЗадача № 7: Определение оценки по предметам.");
         int historyPercent = 59;
@@ -167,26 +169,55 @@ public class IfElseStatementTheme {
         int costPrice = 9000;
         int netProfit = (averageMonthlyProfit - rentPremises - costPrice) * 12;
         if (netProfit < 0) {
-            System.out.println("Прибыль за год: " + netProfit);
+            System.out.println("Прибыль за год : " + netProfit + "руб.");
         } else if (netProfit > 0) {
-            System.out.println("Прибыль за год: " + netProfit);
+            System.out.println("Прибыль за год + : " + netProfit + "руб.");
         }
 
         System.out.println("\nЗадача№ 9: Определение существования треугольника.");
         int a = 3;
         int b = 4;
         int c = 5;
+        int hypotenuse;
+        int cathet1;
+        int cathet2;
+
         if (a + b > c && a + c > b && b + c > a) {
             System.out.println("Треугольник существует: ");
-            if (a < c && b < c) {
-            System.out.println("\nСторона c=" + c + " гипотенуза.");
+            if (a * a + b * b == c * c) {
+                hypotenuse = c;
+            System.out.println("\nСторона c = " + hypotenuse + " гипотенуза.");
+            } else if (b * b + c * c == a * a) {
+                hypotenuse = a;
+            System.out.println("Сторона c = " + hypotenuse + " гипотенуза.");
+            } else if (c * c + a * a == b * b) {
+                hypotenuse = b;
+            System.out.println("Сторона c = " + hypotenuse + " гипотенуза.");
             }
-            if (a *  a + b * b == c * c) {
-                System.out.println("Сторона a=" + a + " и сторона b=" + b + " катеты.");
+            if (c * c - a * a == b * b) {
+                cathet1 = b;
+            System.out.println("Сторона b = " + cathet1 + " катет.");
+            } else if (c * c - b * b == a * a) {
+                cathet1 = a;
+            System.out.println("Сторона c = " + cathet1 + " катет.");
+            } else if (a * a - b * b == c * c) {
+                cathet1 = c;
+            System.out.println("Сторона c = " + cathet1 + " катет.");
             }
+            if (b * b + c * c == a * a) {
+                cathet2 = a;
+            System.out.println("Сторона c = " + cathet2 + " катет.");
+            } else if (b * b + a * a == c * c) {
+                cathet2 = c;
+            System.out.println("Сторона c = " + cathet2 + " катет.");
+            } else if (c * c + a * a == b * b) {
+                cathet2 = b;
+            System.out.println("Сторона c = " + cathet2 + " катет.");
+            }
+
             int p = (a + b + c) / 2;
             double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-            System.out.println("Площадь треугольника = " + s);
+            System.out.println("\nПлощадь треугольника = " + s);
             System.out.println("|\\");
             System.out.println("| \\");
             System.out.println("|  \\");
@@ -216,4 +247,5 @@ public class IfElseStatementTheme {
         System.out.println("Обратный расчет: " + reverseCalculation);
     }
 }
+
 
