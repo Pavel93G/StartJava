@@ -5,11 +5,11 @@ public class IfElseStatementTheme {
 
         if (age > 20) {
             System.out.println("Человек старше 20 лет.");
-        } else { System.out.println("Человек младше 20 лет.");
+        } else {
+            System.out.println("Человек младше 20 лет.");
         }
 
         boolean maleGender = true;
-
         if (!maleGender) {
             System.out.println("Пол не мужской.");
         } else {
@@ -52,20 +52,18 @@ public class IfElseStatementTheme {
         srcNum = -80264;
         if (srcNum != 0) {
             if ((srcNum % 2) == 0) {
-            System.out.println("Данное число чётное.");
-            } else if ((srcNum % 2) != 0) {
-            System.out.println("Даное число нечётное.");
+                System.out.println("Данное число чётное.");
+            } else {
+                System.out.println("Даное число нечётное.");
             }
             if (srcNum > 0) {
-            System.out.println("Данное число является положительным.");
+                System.out.println("Данное число является положительным.");
             } else if (srcNum < 0) {
-            System.out.println("Данное число является отрицательным.");
-            } else {
-            System.out.println("Число является нулём.");
+                System.out.println("Данное число является отрицательным.");
             }
+        } else {
+            System.out.println("Число является нулём.");
         }
-
-
 
         System.out.println("\nЗадача № 4: Поиск одинаковых цифр в числах. ");
 
@@ -168,9 +166,9 @@ public class IfElseStatementTheme {
         int averageMonthlyProfit = 13000;
         int costPrice = 9000;
         int netProfit = (averageMonthlyProfit - rentPremises - costPrice) * 12;
-        if (netProfit < 0) {
+        if (netProfit <= 0) {
             System.out.println("Прибыль за год : " + netProfit + "руб.");
-        } else if (netProfit > 0) {
+        } else {
             System.out.println("Прибыль за год + : " + netProfit + "руб.");
         }
 
@@ -186,33 +184,22 @@ public class IfElseStatementTheme {
             System.out.println("Треугольник существует: ");
             if (a * a + b * b == c * c) {
                 hypotenuse = c;
-            System.out.println("\nСторона c = " + hypotenuse + " гипотенуза.");
+                cathet1 = a;
+                cathet2 = b;
+            System.out.println("\nСторона c = " + hypotenuse + " гипотенуза, а стороны a = " + 
+                cathet1 + " и сторона b = " + cathet2 + " являются катетами.");
             } else if (b * b + c * c == a * a) {
                 hypotenuse = a;
-            System.out.println("Сторона c = " + hypotenuse + " гипотенуза.");
+                cathet1 = b;
+                cathet2 = c;
+            System.out.println("Сторона a = " + hypotenuse + " гипотенуза, а стороны b = " + 
+                cathet1 + " и сторона c = " + cathet2 + " являются катетами.");
             } else if (c * c + a * a == b * b) {
                 hypotenuse = b;
-            System.out.println("Сторона c = " + hypotenuse + " гипотенуза.");
-            }
-            if (c * c - a * a == b * b) {
-                cathet1 = b;
-            System.out.println("Сторона b = " + cathet1 + " катет.");
-            } else if (c * c - b * b == a * a) {
                 cathet1 = a;
-            System.out.println("Сторона c = " + cathet1 + " катет.");
-            } else if (a * a - b * b == c * c) {
-                cathet1 = c;
-            System.out.println("Сторона c = " + cathet1 + " катет.");
-            }
-            if (b * b + c * c == a * a) {
-                cathet2 = a;
-            System.out.println("Сторона c = " + cathet2 + " катет.");
-            } else if (b * b + a * a == c * c) {
                 cathet2 = c;
-            System.out.println("Сторона c = " + cathet2 + " катет.");
-            } else if (c * c + a * a == b * b) {
-                cathet2 = b;
-            System.out.println("Сторона c = " + cathet2 + " катет.");
+            System.out.println("Сторона b = " + hypotenuse + " гипотенуза, а стороны a = " + 
+                cathet1 + " и сторона c = " + cathet2 + " являются катетами.");
             }
 
             int p = (a + b + c) / 2;
