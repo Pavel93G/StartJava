@@ -115,7 +115,7 @@ public class IfElseStatementTheme {
 
         int deposit = 300_000;
         int bankPercent = 0;
-        if(deposit < 100_000) {
+        if (deposit < 100_000) {
             bankPercent = 5;
         } else if (deposit >= 100_000 && deposit <= 300_000) {
             bankPercent = 7;
