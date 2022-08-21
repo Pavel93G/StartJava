@@ -1,7 +1,7 @@
 public class MyFirstGame {
     public static void main(String[] args) {
-        int srcNum = 99;
-        int playerNum = 78;
+        int srcNum = 10;
+        int playerNum = 25;
 
         while ( srcNum != playerNum) {
             if (srcNum > playerNum) {
@@ -9,8 +9,9 @@ public class MyFirstGame {
                 playerNum++;
             } else if (srcNum < playerNum){
                 System.out.println("Ваше число: " + playerNum + ", больше загаданного числа =)");
+                playerNum--;
             }
         }
-        System.out.println("Урра!!! Вы победили =)");
+        System.out.println("Ваше число: " + playerNum + " Урра!!! Вы победили =)");
     }
 }
