@@ -192,7 +192,6 @@ public class CyclesTheme {
         System.out.println("Сумма второй тройки цифр = " + sum2);
         System.out.println((sum1 == sum2) ? "Число счастливое" : "Число несчастливое");
 
-
         System.out.println("\nЗадача № 10: Вывод таблицы умножения Пифагора.");
 
         for (i = 1; i < 10; i++) {
