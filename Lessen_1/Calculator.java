@@ -2,10 +2,10 @@ public class Calculator {
     public static void main(String[] args) {
         System.out.println("Задание: Калькулятор");
 
-        int num1 = 245;
-        int num2 = 4356;
+        int num1 = 157;
+        int num2 = 1811;
         float  result = 0.0f;
-        char operation = '+';
+        char operation = '*';
 
         if (operation == '/' && num2 == 0) {
             System.out.println("Не определенно");

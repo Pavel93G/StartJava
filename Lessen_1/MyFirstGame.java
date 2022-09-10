@@ -1,6 +1,6 @@
 public class MyFirstGame {
     public static void main(String[] args) {
-        int srcNum = 10;
+        int compNum = 10;
         int playerNum = 25;
 
         while ( srcNum != playerNum) {
