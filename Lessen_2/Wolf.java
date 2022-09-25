@@ -1,33 +1,77 @@
 public class Wolf {
 
-    String gender;
-    String nickname;
-    double weight;
-    String color;
-    int age;
+    private String gender;
+    private String nickname;
+    private double weight;
+    private String color;
+    private int age;
 
-    boolean go() {
-        System.out.println("Волк идет ");
+    public boolean go() {
+        System.out.print("\nВолк идет ");
         return false;
     }
 
-    boolean sit() {
-        System.out.println("Волк сидит ");
+    public boolean sit() {
+        System.out.print("\nВолк сидит ");
         return false;
     }
-    boolean run() {
-        System.out.println("Волк бежит ");
+    public boolean run() {
+        System.out.print("\nВолк бежит ");
         return false;
     }
 
-    boolean howl() {
-        System.out.println("Волк воет на луну");
+    public boolean howl() {
+        System.out.print("\nВолк воет на луну");
         return true;
     }
 
-    boolean hunt() {
-        System.out.println("Волк охотится на зайца");
+    public boolean hunt() {
+        System.out.print("\nВолк охотится на зайца");
         return false;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public  void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color = color;
+    }
+
+    public void setAge(int age) {
+        if (age < 8) {
+            this.age =  age;
+        } else {
+            System.out.println("Вы ввели некорректный возраст.");
+        }
+    }
+
+    public int getAge() {
+        return age;
     }
 }
 
@@ -35,20 +79,20 @@ class WolfTest {
     public static void main(String[] args) {
     Wolf newWolf = new Wolf();
 
-    newWolf.gender = "Самец";
-    newWolf.nickname = "Альфа";
-    newWolf.weight = 54.0;
-    newWolf.color = "Серый";
-    newWolf.age = 9;
+    newWolf.setGender("Самец");
+    newWolf.setNickname("Чоп");
+    newWolf.setWeight(56.250);
+    newWolf.setColor("Серый");
+    newWolf.setAge(3);
 
     System.out.print("Волк");
-    System.out.print("\nПол волка: " + newWolf.gender);
-    System.out.print("\nКличка волка: " + newWolf.nickname);
-    System.out.print("\nВес волка: " + newWolf.weight);
-    System.out.print("\nЦвет Волка: " + newWolf.color);
-    System.out.print("\nВозраст Волка: " + newWolf.age);
+    System.out.print("\nПол волка: " + newWolf.getGender());
+    System.out.print("\nКличка волка: " + newWolf.getNickname());
+    System.out.print("\nВес волка: " + newWolf.getWeight());
+    System.out.print("\nЦвет Волка: " + newWolf.getColor());
+    System.out.print("\nВозраст Волка: " + newWolf.getAge());
     System.out.print("\n");
-    
+
     newWolf.hunt();
     newWolf.go();
     newWolf.sit();
