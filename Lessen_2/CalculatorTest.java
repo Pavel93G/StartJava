@@ -9,6 +9,7 @@ public class CalculatorTest {
         System.out.println("Калькулятор включен!");
 
         String answer = "Да";
+
         while(answer.equals("Да")) {
             System.out.print("Введите первое число: ");
             int firstNumber = scanner.nextInt();
