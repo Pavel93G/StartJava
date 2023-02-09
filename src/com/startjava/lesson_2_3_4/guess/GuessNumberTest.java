@@ -6,27 +6,23 @@ public class GuessNumberTest {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String answerPlayer = "Да";
+        System.out.println("Игра началась!");
         System.out.print("Введите имя первого игрока: ");
-        String name1 = scanner.nextLine();
-        Player player1 = new Player(name1);
+        String namePLayerOne = scanner.nextLine();
+        Player playerOne = new Player(namePLayerOne);
 
-        System.out.print("Введите имя второго игрока: ");
-        String name2 = scanner.nextLine();
-        Player player2 = new Player(name2);
+        System.out.print("Введите имя вторго игрока: ");
+        String namePLayerTwo = scanner.nextLine();
+        Player playerTwo = new Player(namePLayerTwo);
 
-        System.out.println(player1.getName());
-        System.out.println(player2.getName());
-
-        GuessNumber game = new GuessNumber(player1, player2);
-        String playerAnswer = "да";
+        GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo);
 
         do {
-            if("да".equals(playerAnswer)) {
-                game.startGame();
-            }
-            System.out.print("Хотите продолжить игру [да/нет]: ");
-            playerAnswer = scanner.nextLine();
-        } while(!"нет".equals(playerAnswer));
-           
+            guessNumber.startGame();
+            System.out.print("Хотиете продолжить игру? [Да/Нет]: ");
+            answerPlayer = scanner.nextLine();
+        } while (!answerPlayer.equals("Да") && !answerPlayer.equals("Нет"));
+        System.out.println("Игра окончина!");
     }
 }

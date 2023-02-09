@@ -1,53 +1,49 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
+    private static int numOne;
+    private static int numTwo;
+    private static char mathOperation;
+    private static int result = 0;
 
-    private int firstNumber;
-    private char mathOperation;
-    private int secondNumber;
+    public static void setNumOne(int numOne) {
+        Calculator.numOne = numOne;
+    }
 
-    public void calculate() {
-        switch(mathOperation) {
-        case '+':
-            System.out.println(firstNumber + secondNumber);
-            break;
-        case '-':
-            System.out.println(firstNumber - secondNumber);
-            break;
-        case '*':
-            System.out.println(firstNumber * secondNumber);
-            break;
-        case '/':
-            System.out.println(firstNumber / secondNumber);
-            break;
-        case '^':
-            pow();
-            break;
-        case '%':
-            System.out.println(firstNumber % secondNumber);
-            break;
-        default:
-            System.out.println("Ошибка! Ввели не верный знак.");
+    public static void setNumTwo(int numTwo) {
+        Calculator.numTwo = numTwo;
+    }
+
+    public static void setMathOperation(char mathOperation) {
+        Calculator.mathOperation = mathOperation;
+    }
+
+    public static float getResult() {
+        return result;
+    }
+
+    public static int calculation(String mathExpression) {
+        String[] arguments = mathExpression.split(" ");
+        if(arguments.length != 3) {
+            throw new IllegalArgumentException("Вы ввели неверное вырожение\n" + "Пример: 5 + 4");
         }
-    }
-
-    public void pow() {
-    int result = 1;
-    for(int i = 0; i < secondNumber; i++) {
-        result = result * firstNumber;
-    }
-    System.out.println(result);
-}
-
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public void setMathOperation(char mathOperation) {
-        this.mathOperation = mathOperation;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
+        setNumOne(Integer.parseInt(arguments[0]));
+        setNumTwo(Integer.parseInt(arguments[2]));
+        if (numOne < 1 || numTwo < 1 || numOne % 1 != 0 || numTwo % 2 != 0) {
+            throw new IllegalArgumentException("Введено некоректное значение\nЧисла должны быть" +
+                    " целые и положительные");
+        }
+        setMathOperation(arguments[1].charAt(0));
+        switch (mathOperation) {
+            case '+' -> result = Math.addExact(numOne, numTwo);
+            case '-' -> result = Math.subtractExact(numOne, numTwo);
+            case '*' -> result = Math.multiplyExact(numOne, numTwo);
+            case '/' -> result = Math.divideExact(numOne, numTwo);
+            case '%' -> result = Math.floorMod(numOne, numTwo);
+            case '^' -> result = (int) Math.pow(numOne, numTwo);
+            default -> throw new IllegalStateException("Введен неверный математический знак" + mathExpression +
+                    "Допустимые знаки: +; -; /; %; ^:");
+        }
+        return result;
     }
 }
